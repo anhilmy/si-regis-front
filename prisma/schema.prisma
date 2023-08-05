@@ -10,18 +10,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Kegiatan {
+model kegiatan {
   id         Int      @id @default(autoincrement())
   judul      String
   desc       String?
   kategoriId Int
-  kategori   Kategori @relation(fields: [kategoriId], references: [id])
+  kategori   kategori @relation(fields: [kategoriId], references: [id])
   no_surat   String?
 }
 
-model Kategori {
+model kategori {
   id        Int        @id @default(autoincrement())
   nama      String
   is_active Boolean    @default(true)
-  Kegiatan  Kegiatan[]
+  kegiatan  kegiatan[]
 }
