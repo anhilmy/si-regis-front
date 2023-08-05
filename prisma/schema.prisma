@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Kegiatan {
+  id         Int      @id @default(autoincrement())
+  judul      String
+  desc       String?
+  kategoriId Int
+  kategori   Kategori @relation(fields: [kategoriId], references: [id])
+  no_surat   String?
+}
+
+model Kategori {
+  id        Int        @id @default(autoincrement())
+  nama      String
+  is_active Boolean    @default(true)
+  Kegiatan  Kegiatan[]
+}

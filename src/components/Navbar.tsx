@@ -8,7 +8,7 @@ export default function Navbar() {
             <h1 className="text-5xl">SI REGIS</h1>
             <div className="flex space-x-3 text-2xl text-slate-600">
                 <Link href={"/"}>Home</Link>
-                <Link href={"/surat-tugas"}>Surat Tugas</Link>
+                <Link href={"/surat-tugas"}>Kegiatan</Link>
                 <Link href={"/about"}>About</Link>
             </div>
       </header>
