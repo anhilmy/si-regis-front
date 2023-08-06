@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar'
+import Sidebar from '@/components/Sidebar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -19,13 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar/>
-          <div className={`${inter.className} container mx-auto p-4 min-w-[100vh]`}>
-        
-          {children}
-          
+        <div className='flex flex-col h-screen justify-start'>
+          <Navbar />
+          <div className='flex flex-row'>
+            <Sidebar />
+            <div className={`${inter.className} mt-36 mb-auto container mx-auto p-4`}>
+              {children}
+            </div>
           </div>
-        <Footer />
+          <Footer />
+        </div>
       </body>
     </html>
   )

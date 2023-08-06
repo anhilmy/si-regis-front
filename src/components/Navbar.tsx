@@ -3,15 +3,15 @@ import { NavbarProps } from "@/props/NavbarProps";
 
 export default function Navbar() {
     return <>
-    <div>
-        <header className="mx-auto flex mt-6 mb-28 justify-between items-center">
-            <h1 className="text-5xl">SI REGIS</h1>
-            <div className="flex space-x-3 text-2xl text-slate-600">
-                <Link href={"/"}>Home</Link>
-                <Link href={"/surat-tugas"}>Kegiatan</Link>
-                <Link href={"/about"}>About</Link>
-            </div>
-      </header>
-    </div>
+        <div className="bg-sky-200">
+            <header className="flex mx-auto m-4 justify-between items-center container p-4">
+                <h1 className="text-5xl">SI REGIS</h1>
+                <div className="flex space-x-5 text-2xl text-slate-600">
+                    <Link href={"/"}>Home</Link>
+                    <Link href={"/kegiatan"}>Kegiatan</Link>
+                    <Link href={"/about"}>About</Link>
+                </div>
+            </header>
+        </div>
     </>
 }
