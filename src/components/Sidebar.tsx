@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Bars4Icon, BriefcaseIcon, ChevronDownIcon, UserIcon } from "@heroicons/react/24/outline";
+import { Bars4Icon, BriefcaseIcon, ChevronDownIcon, Cog6ToothIcon, UserIcon } from "@heroicons/react/24/outline";
 
 export default function Sidebar() {
     return <>
@@ -23,6 +23,18 @@ export default function Sidebar() {
                         Profile
                     </span>
                 </Link >
+            </div>
+
+            <hr className="h-px mt-8 bg-gray-400 border-0 dark:bg-gray-700" />
+
+            <div className="flex mt-6 items-center">
+                <div className="flex items-center">
+                    <Cog6ToothIcon className="text-white w-8 h-8" />
+                    <span className=" text-white lg:text-xl ml-4">
+                        Setting
+                    </span>
+                </div >
+                <ChevronDownIcon className="text-gray-400 w-3 h-3 ml-3 mt-2" />
             </div>
         </div>
     </>
