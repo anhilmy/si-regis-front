@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRightIcon } from '@heroicons/react/20/solid'
-import { SummaryKategori } from '@/props/kategori/summary'
+import { SummaryKategori } from '@/props/kategori/kategori'
 
 
 async function getSummary() {

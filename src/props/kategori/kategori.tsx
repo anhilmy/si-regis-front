@@ -4,3 +4,10 @@ export type SummaryKategori = {
     nama: string,
     is_active: string
 }
+
+export type Kategori = {
+    id: number,
+    nama: string,
+    is_active: boolean
+
+}
