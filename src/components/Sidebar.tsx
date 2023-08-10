@@ -3,7 +3,7 @@ import { Bars4Icon, BriefcaseIcon, ChevronDownIcon, UserIcon } from "@heroicons/
 
 export default function Sidebar() {
     return <>
-        <div className='flex flex-col bg-indigo-800 h-screen p-5 w-52'>
+        <div className='flex flex-col bg-indigo-800 h-[85vh] p-5 w-52'>
             <Bars4Icon className="text-white w-8 h-8" />
 
             <div className="flex items-center pt-12">
