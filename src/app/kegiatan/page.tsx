@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 async function GetAllKegiatan() {
-  const res = await fetch(`${process.env.BASE_KEGIATAN_URL}kegiatan`)
+  const res = await fetch(`${process.env.BASE_KEGIATAN_URL}kegiatan`, { cache: 'no-store' })
 
   if (!res.ok) {
     throw new Error("failed to fetch data")
@@ -44,8 +44,8 @@ export default async function ListKegiatan() {
               <tr>
                 <td className='border text-center'>{index + 1}</td>
                 <td className='border pl-3'>{kegiatan.judul}</td>
-                <td className='border text-center'>-</td>
-                <td className='border text-center'>{kegiatan.kategori.ID ? kegiatan.kategori.ID : "-"}</td>
+                <td className='border text-center'>{kegiatan.status}</td>
+                <td className='border text-center'>{kegiatan.kategori.ID ? kegiatan.kategori.nama : "-"}</td>
                 <td className='border text-center'>{kegiatan.no_surat == "" ? "-" : kegiatan.no_surat}</td>
                 <td className='text-center pl-3' >
                   <div className='grid grid-cols-3 gap-1'>

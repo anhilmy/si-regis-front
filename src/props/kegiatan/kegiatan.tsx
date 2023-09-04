@@ -4,7 +4,7 @@ export type Kegiatan = {
     desc: string,
     kategori: KategoriId,
     no_surat: string,
-    status: StatusKegiatan,
+    status: string,
 }
 
 export enum StatusKegiatan {
@@ -15,5 +15,6 @@ export enum StatusKegiatan {
 }
 
 export type KategoriId = {
-    ID: number
+    ID: number,
+    nama: string
 }
